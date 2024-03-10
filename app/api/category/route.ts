@@ -30,6 +30,6 @@ export async function GET() {
         return Response.json(category)
     } catch (error) {
         console.log(error)
-        return new NextResponse("Internal Error", { status: 500 })
+        return new NextResponse(JSON.stringify(error), { status: 500 })
     }
 }
